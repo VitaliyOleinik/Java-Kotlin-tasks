@@ -79,7 +79,7 @@ public class Main {
 		System.out.println(s.substring(l, r + 1));
 	}
 
-    public static void main(String[] args) {
+	void repeatCountNum() {
 		Scanner in = new Scanner(System.in);
 		String s = in.next();
 //		if ((s.length() - 1) / 2 != 0){
@@ -107,5 +107,38 @@ public class Main {
 			}
 		}
 		System.out.println("YES");
+	}
+
+    public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n = 3, m = 3;
+		int [][] array = new int[n][m];
+		for (int i = 0; i < n; i ++) {
+			for (int j = 0; j < m; j ++) {
+				array[i][j] = in.nextInt();
+			}
+		}
+
+		int [] total = new int[array.length];
+		for(int column= 0; column< array.length; column++)
+		{
+			total[column] = 0;
+			for(int row= 0; row < array.length; row++)
+			{
+				total[column] += array[row][column];
+			}
+		}
+
+		for (int row = 0; row < array.length; row ++) {
+			total[row] = 0;
+			for (int column= 0; column< array.length; column++)
+			{
+				total[row] += array[row][column];
+			}
+		}
+
+		for (int i = 0; i < array.length; i ++) {
+			System.out.print(total[i] + " ");
+		}
 	}
 }

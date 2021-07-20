@@ -109,7 +109,7 @@ public class Main {
 		System.out.println("YES");
 	}
 
-    public static void main(String[] args) {
+	public static void countRowAndColumn() {
 		Scanner in = new Scanner(System.in);
 		int n = 3, m = 3;
 		int [][] array = new int[n][m];
@@ -140,5 +140,18 @@ public class Main {
 		for (int i = 0; i < array.length; i ++) {
 			System.out.print(total[i] + " ");
 		}
+	}
+
+    public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String s = in.next();
+		char[] chars = s.toCharArray();
+		for (int i = 0; i < chars.length - 1; i ++) {
+			if (chars[i] > chars[i+1]) {
+				System.out.println("NO");
+				return;
+			}
+		}
+		System.out.println("YES");
 	}
 }

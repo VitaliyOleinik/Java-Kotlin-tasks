@@ -142,7 +142,7 @@ public class Main {
 		}
 	}
 
-    public static void main(String[] args) {
+	public static void order() {
 		Scanner in = new Scanner(System.in);
 		String s = in.next();
 		char[] chars = s.toCharArray();
@@ -153,5 +153,28 @@ public class Main {
 			}
 		}
 		System.out.println("YES");
+	}
+
+	public static void amountOfCharacter() {
+		Scanner in = new Scanner(System.in);
+		String s = in.next();
+		String x = in.next();
+		int n = in.nextInt();
+		char[] chars = s.toCharArray();
+		int cnt = 0;
+		for (int i = 0; i < s.length(); i ++) {
+			if (chars[i] == x.charAt(0)) {
+				cnt ++;
+			}
+		}
+		if (cnt == n) {
+			System.out.println("YES");
+		} else {
+			System.out.println("NO");
+		}
+	}
+
+    public static void main(String[] args) {
+
 	}
 }

@@ -175,6 +175,24 @@ public class Main {
 	}
 
     public static void main(String[] args) {
-
+		Scanner in = new Scanner(System.in);
+		String s = in.next();
+		String t = in.next();
+		char[] sChars = s.toCharArray();
+		char[] tChars = t.toCharArray();
+		for (int i = 0, j = 0; i < tChars.length;  i ++, j ++) {
+				if (j > sChars.length - 1) {
+					j = 0;
+				}
+				if (sChars[j] != tChars[i]) {
+					System.out.println("NO");
+					return;
+				}
+				if (tChars.length - 1 == i && j < sChars.length - 1) {
+					System.out.println("NO");
+					return;
+				}
+		}
+		System.out.println("YES");
 	}
 }

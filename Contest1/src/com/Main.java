@@ -1,6 +1,8 @@
 package com;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -213,6 +215,22 @@ public class Main {
 	}
 
     public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String apple = in.nextLine();
 
+		Map<Character, Integer> charList = new HashMap<Character, Integer>();
+		for (char c = 'a'; c <= 'z'; ++c) {
+			charList.put(c, 0);
+		}
+
+		Character first = apple.toLowerCase().charAt(0);
+		Integer count = charList.get(first);
+		if (count != null) {
+			charList.put(first, ++count);
+		}
+
+		for (Map.Entry<Character, Integer> entry : charList.entrySet()) {
+			System.out.println("The number of words that start with "+entry.getKey()+" - " + entry.getValue());
+		}
 	}
 }

@@ -174,25 +174,45 @@ public class Main {
 		}
 	}
 
-    public static void main(String[] args) {
+	public static void task74871() {
 		Scanner in = new Scanner(System.in);
 		String s = in.next();
 		String t = in.next();
 		char[] sChars = s.toCharArray();
 		char[] tChars = t.toCharArray();
 		for (int i = 0, j = 0; i < tChars.length;  i ++, j ++) {
-				if (j > sChars.length - 1) {
-					j = 0;
-				}
-				if (sChars[j] != tChars[i]) {
-					System.out.println("NO");
-					return;
-				}
-				if (tChars.length - 1 == i && j < sChars.length - 1) {
-					System.out.println("NO");
-					return;
-				}
+			if (j > sChars.length - 1) {
+				j = 0;
+			}
+			if (sChars[j] != tChars[i]) {
+				System.out.println("NO");
+				return;
+			}
+			if (tChars.length - 1 == i && j < sChars.length - 1) {
+				System.out.println("NO");
+				return;
+			}
 		}
 		System.out.println("YES");
+	}
+
+	public static void shift() {
+		Scanner in = new Scanner(System.in);
+		String s = in.next();
+		char [] chars = s.toCharArray();
+		for (int i = 0; i < chars.length; i ++) {
+			if (chars[i] == 'z') {
+				chars[i] = 'a';
+			} else {
+				chars[i] ++;
+			}
+		}
+		for (char c : chars) {
+			System.out.print(c);
+		}
+	}
+
+    public static void main(String[] args) {
+
 	}
 }

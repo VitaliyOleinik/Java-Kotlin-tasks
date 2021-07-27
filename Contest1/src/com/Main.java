@@ -235,7 +235,7 @@ public class Main {
 		}
 	}
 
-    public static void main(String[] args) {
+	public void nBooksDividedByKDays() {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt(), k = in.nextInt();
 		if (n % k == 0) {
@@ -243,5 +243,25 @@ public class Main {
 		} else {
 			System.out.println(n / k + 1);
 		}
+	}
+
+	public void exchange() {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int [] a = new int[n];
+		for (int i = 0; i < a.length; i ++) {
+			a[i] = in.nextInt();
+		}
+		int d = in.nextInt();
+		for (int i = 0; i < a.length; i ++) {
+			a[i] *= d;
+		}
+		for (int i : a) {
+			System.out.print(i + " ");
+		}
+	}
+
+    public static void main(String[] args) {
+
 	}
 }

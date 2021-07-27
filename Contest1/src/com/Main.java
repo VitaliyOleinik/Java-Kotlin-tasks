@@ -261,6 +261,22 @@ public class Main {
 		}
 	}
 
+	public void interestingArray() {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int[] a = new int[n];
+		for (int i = 0; i < n; i ++) {
+			a[i] = in.nextInt();
+		}
+		for (int i = 0, j = 1; i < n - 1; i ++, j ++) {
+			if (a[i] > a[j]) {
+				System.out.println("Not interesting");
+				return;
+			}
+		}
+		System.out.println("Interesting");
+	}
+
     public static void main(String[] args) {
 
 	}

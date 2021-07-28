@@ -277,7 +277,26 @@ public class Main {
 		System.out.println("Interesting");
 	}
 
-    public static void main(String[] args) {
+	public void guessingGame() {
+		Scanner in = new Scanner(System.in);
+		char[] alphabet = new char[]{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t',
+				'u','v','w','x','y','z'};
+		String s = in.next();
+		char [] givenChars = s.toCharArray();
+		int sum1 = 0, sum2 = 0;
+		for (int i = 0, j = 0; i < alphabet.length; i ++, j ++) {
+			sum1 += alphabet[i];
+			if (j < givenChars.length){
+				sum2 += givenChars[j];
+			}
+		}
+		//System.out.println(sum1 + "    " + sum2 + "sum1 - sum2 " + (sum1 - sum2));
+		char a = (char) (sum1 - sum2);
+		System.out.println(a);
+		in.close();
+	}
+
+	public static void main(String[] args) {
 
 	}
 }

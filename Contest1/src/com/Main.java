@@ -296,6 +296,20 @@ public class Main {
 		in.close();
 	}
 
+	void  get_divisor() {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int min = 2;
+		for (int i = 2; i <= n; i++) {
+			if (n % i == 0) {
+				min = i;
+				System.out.println(min);
+				in.close();
+				return;
+			}
+		}
+	}
+
 	public static void main(String[] args) {
 
 	}

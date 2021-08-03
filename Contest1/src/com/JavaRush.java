@@ -57,6 +57,13 @@ public class JavaRush {
         }
     }
 
+    void numerationRowOfFile () {
+        Scanner in = new Scanner(System.in);
+        for (int i = 1; in.hasNext(); i ++) {
+            System.out.println(i + " " + in.nextLine());
+        }
+    }
+
     public static void main(String[] args) {
 
     }
